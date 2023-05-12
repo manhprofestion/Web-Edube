@@ -1,0 +1,115 @@
+<section class="pt-3 pt-xl-5">
+	<div class="container" data-sticky-container>
+		<div class="row g-4">
+			<!-- Main content START -->
+			<div class="col">
+
+				<div class="row g-4">
+					<!-- Title START -->
+					<div class="col-12">
+						<!-- Title -->
+						<h2>{{course.name}}</h2>
+						<p>{{course.description}}</p>
+						<!-- Content -->
+						<ul class="list-inline mb-0">
+							<li class="list-inline-item fw-light h6 me-3 mb-1 mb-sm-0"><i class="fas fa-star me-2"></i>4.5/5.0</li>
+							<li class="list-inline-item fw-light h6 me-3 mb-1 mb-sm-0"><i class="fas fa-user-graduate me-2"></i>12k Enrolled</li>
+							<li class="list-inline-item fw-light h6 me-3 mb-1 mb-sm-0"><i class="fas fa-signal me-2"></i>{{course.level}}</li>
+							
+						</ul>
+					</div>
+					<!-- Title END -->
+
+					<!-- Image and video -->
+					<div class="col-12 position-relative">
+						<div class="video-player rounded-3">
+							{{!-- <video controls crossorigin="anonymous" playsinline poster="assets/images/videos/poster.jpg">
+								<source src="assets/images/videos/360p.mp4" type="video/mp4" size="360">
+								<source src="assets/images/videos/720p.mp4" type="video/mp4" size="720">
+								<source src="assets/images/videos/1080p.mp4" type="video/mp4" size="1080">
+								<!-- Caption files -->
+								<track kind="captions" label="English" srclang="en" src="assets/images/videos/en.vtt" default>
+								<track kind="captions" label="French" srclang="fr" src="assets/images/videos/fr.vtt">
+							</video> --}}
+                            <iframe width="1280" height="720" src="https://www.youtube.com/embed/{{course.videoId}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+						</div>
+					</div>
+
+					
+
+					<!-- Curriculum START -->
+					<div class="col-12">
+						<div class="card border rounded-3">
+							<!-- Card header START -->
+							<div class="card-header border-bottom">
+								<h3 class="mb-0">Curriculum</h3>
+							</div>
+							<!-- Card header END -->
+		
+							<!-- Card body START -->
+							<div class="card-body">
+								<div class="row g-5">
+									<!-- Lecture item START -->
+                                    {{#each course.lecture}}
+									<div class="col-12">
+
+										<!-- Curriculum item -->
+                                        
+										<h5 class="mb-4">{{this.lectureName}}</h5>
+                                        {{#each this.topic}}
+										<div class="d-sm-flex justify-content-sm-between align-items-center">
+											<div class="d-flex">
+												<a href="https://www.youtube.com/embed/{{this.videoID}}" class="btn btn-danger-soft btn-round mb-0"><i class="fas fa-play"></i></a>
+												<div class="ms-2 ms-sm-3 mt-1 mt-sm-0">	
+													<h6 class="mb-0">{{this.topicName}}</h6>
+												</div>
+											</div>
+											<!-- Button -->
+											<a href="https://www.youtube.com/embed/{{this.videoID}}" class="btn btn-sm btn-success mb-0">Play</a>
+										</div>
+										<!-- Divider -->
+										<hr>
+                                        {{/each}}
+										
+		
+										
+									</div>
+									<!-- Lecture item END -->
+                                    {{/each}}
+									
+
+									
+									
+
+									<!-- Collapse body START -->
+									
+
+									<!-- Collapse button -->
+									{{!-- <a class="mb-0 mt-4 btn-more d-flex align-items-center justify-content-center" data-bs-toggle="collapse" href="#collapseCourse" role="button" aria-expanded="false" aria-controls="collapseCourse">
+										See <span class="see-more mx-1">more</span><span class="see-less mx-1">less</span> video<i class="fas fa-angle-down ms-2"></i>
+									</a>
+									 --}}
+								</div>
+							</div>
+							<!-- Card body START -->
+						</div>
+					</div>
+					<!-- Curriculum END -->
+
+					<!-- FAQs START -->
+					
+				</div>
+			</div>
+			<!-- Main content END -->
+
+			<!-- Right sidebar START -->
+			
+
+		</div><!-- Row END -->
+	</div>
+</section>
+<!-- =======================
+Page content END -->
+
+</main>
